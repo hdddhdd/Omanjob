@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>콘텐츠 재생</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="../static/main.css">
+</head>
+
+<body>
+    <!--navbar-->
+    {% include 'navbar.html' %}
+    <!--퍼가기 허용된 영상만 가능-->
+    <div class="content-youtube">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/CG41Yw2l8gU?autoplay=0"
+            title="YouTube video player" frameborder="1"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+
+    <!--footer-->
+    {% include 'footer.html' %}
+</body>
+
+</html>
