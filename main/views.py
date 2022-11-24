@@ -9,3 +9,7 @@ def test(request):
 
 def play(request):
     return render(request, 'play.html')
+def mbti(request):
+    return render(request, 'mbti.html')
+def review(request):
+    return render(request, 'review.html')
