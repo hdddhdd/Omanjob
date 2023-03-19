@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="../static/css/navbar.css">
+<!--여기에 부트스트랩 코드 금지-->
+<script src="../static/js/navbar.js"></script>
+<script>
+    jQuery(function ($) {
+        $(window).on('scroll', function () {
+            if ($(this).scrollTop() >= 200) {
+                $('.navbar').addClass('fixed-top');
+            } else if ($(this).scrollTop() == 0) {
+                $('.navbar').removeClass('fixed-top');
+            }
+        });
+
+        function adjustNav() {
+            var winWidth = $(window).width(),
+                dropdown = $('.dropdown'),
+                dropdownMenu = $('.dropdown-menu');
+
+            if (winWidth >= 768) {
+                dropdown.on('mouseenter', function () {
+                    $(this).addClass('show')
+                        .children(dropdownMenu).addClass('show');
+                });
+
+                dropdown.on('mouseleave', function () {
+                    $(this).removeClass('show')
+                        .children(dropdownMenu).removeClass('show');
+                });
+            } 
+            else {
+                dropdown.off('mouseenter mouseleave');
+            }
+        }
+
+        $(window).on('resize', adjustNav);
+
+        adjustNav();
+    });
+
+</script>
+
+    <header class="header-area">
+        <nav class="navbar navbar-expand-md navbar-dark">
+            <div class="container" style="float:left">
+                <!-- <a href="#" class="navbar-brand">Bootdey.com</a> -->
+                <a href="/"> <img class="main-logo" src="../static/img/omanjob-logo.png" alt="">
+                </a>
+                &nbsp; &nbsp; &nbsp;
+                <!-- <div id="main-nav" class=""> -->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li><a href="play" class="nav-item nav-link active">학과</a></li>
+                        <li><a href="mbti" class="nav-item nav-link">MBTI</a></li>
+                        <li><a href="review" class="nav-item nav-link">콘텐츠 후기</a></li>
+
+                        <li><a href="#" class="nav-item nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
