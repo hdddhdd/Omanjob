@@ -23,10 +23,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jq5kc&f21tj@n=3estca=^!!drfs5b&2-41op_zxe93ujp9r7k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# 배포때문에 false로 바꿈
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+#ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
+ALLOWED_HOSTS = [
+    'ozzic.pythonanywhere.com',
+    'port-0-omanjob-17xqnr2algptvg9y.sel3.cloudtype.app'
+]
 
 # Application definition
 
@@ -121,3 +125,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR +'/main/static',
+]
