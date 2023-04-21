@@ -29,7 +29,7 @@ DEBUG = False
 #ALLOWED_HOSTS = ['*', '.pythonanywhere.com']
 ALLOWED_HOSTS = [
     'ozzic.pythonanywhere.com',
-    'port-0-omanjob-17xqnr2algptvg9y.sel3.cloudtype.app'
+    'port-0-omanjob-17xqnr2algpua1h9.sel3.cloudtype.app'
 ]
 
 # Application definition
